@@ -7,14 +7,14 @@
 import fs from 'fs'
 
 let vdf = process.env['CI_STEAM_VDF']
-let configFile = 'Config/DefaultEngine.ini'
+let configFile = './Game/Config/DefaultEngine.ini'
 
 // extract app ID from the VDF file
+
 vdf = fs.readFileSync(vdf, { encoding: 'utf8' })
 vdf = vdf.split('\n')
 
 let appId
-
 for (let row of vdf) {
   if (row.includes('appid')) {
     appId = row
