@@ -7,7 +7,7 @@
 import fs from 'fs'
 
 let vdf = process.env['CI_STEAM_VDF']
-let configFile = './Game/Config/DefaultEngine.ini'
+let configFile = '../../../Game/Config/DefaultEngine.ini'
 
 // extract app ID from the VDF file
 
